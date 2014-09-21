@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ConfigureAwaitChecker</id>
-    <version>0.1.0.0</version>
+    <version>0.1.0.2</version>
     <title>ConfigureAwait Checker</title>
     <authors>Eli Arbel</authors>
     <description>Library code should call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.</description>
@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\bin\Arbel.ReSharper.ConfigureAwaitPlugin.dll" target="ReSharper\vAny\vs11.0\plugins" />
+    <file src="..\bin\Arbel.ReSharper.ConfigureAwaitPlugin.dll" target="ReSharper\vAny\plugins" />
   </files>
 </package>
