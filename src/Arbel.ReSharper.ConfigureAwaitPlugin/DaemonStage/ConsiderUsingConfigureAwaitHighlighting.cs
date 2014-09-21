@@ -7,7 +7,7 @@ using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
   null,
   HighlightingGroupIds.BestPractice,
   "Consider adding ConfigureAwait",
-  "Library code should usually call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
+  "Library code should call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
   Severity.SUGGESTION,
   false)]
 

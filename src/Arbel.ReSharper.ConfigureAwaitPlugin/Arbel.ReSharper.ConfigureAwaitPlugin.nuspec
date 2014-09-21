@@ -5,9 +5,12 @@
     <version>0.1.0.0</version>
     <title>ConfigureAwait Checker</title>
     <authors>Eli Arbel</authors>
-    <description>Library code should usually call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.</description>
+    <description>Library code should call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.</description>
     <copyright>Copyright &#x00A9; 2014 Eli Arbel</copyright>
     <tags>await async configureawait</tags>
+    <projectUrl>https://github.com/aelij/ReSharperPlugins/</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/aelij/ReSharperPlugins/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="ReSharper" version="[8.0, 8.3)" />
     </dependencies>
