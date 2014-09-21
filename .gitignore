@@ -16,6 +16,7 @@ x86/
 build/
 bld/
 [Bb]in/
+bin.tests/
 [Oo]bj/
 
 # Roslyn cache directories
