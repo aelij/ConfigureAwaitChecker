@@ -11,8 +11,8 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
 {
     public sealed class ConsiderUsingConfigureAwaitDaemonProcess : IDaemonStageProcess
     {
-        private static readonly string TaskTypeName = typeof(System.Threading.Tasks.Task).FullName;
-        private static readonly string TaskOfTTypeName = typeof(System.Threading.Tasks.Task<>).FullName;
+        private const string TaskTypeName = "System.Threading.Tasks.Task";
+        private const string TaskOfTTypeName = "System.Threading.Tasks.Task`1";
 
         private readonly IDaemonProcess _daemonProcess;
 
