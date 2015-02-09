@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>..\bin\v8\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,7 +55,7 @@
     <Compile Include="QuickFix\ConsiderUsingConfigureAwaitQuickFix.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Arbel.ReSharper.ConfigureAwaitPlugin.nuspec" />
+    <None Include="Arbel.ReSharper.ConfigureAwaitPlugin.v8.nuspec" />
     <None Include="packages.v8.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

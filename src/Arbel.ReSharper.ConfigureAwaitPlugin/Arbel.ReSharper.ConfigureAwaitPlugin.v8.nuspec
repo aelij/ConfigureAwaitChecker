@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\bin\Arbel.ReSharper.ConfigureAwaitPlugin.v8.dll" target="ReSharper\vAny\plugins" />
+    <file src="..\bin\v8\Arbel.ReSharper.ConfigureAwaitPlugin.v8.dll" target="ReSharper\vAny\plugins" />
   </files>
 </package>
