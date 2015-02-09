@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using JetBrains.ReSharper.Daemon;
+using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
@@ -40,21 +41,31 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
             IFile file = psiServices.Files.GetDominantPsiFile<CSharpLanguage>(sourceFile);
             if (file == null)
                 return;
-            file.ProcessChildren<IAwaitExpression>(
-                expression =>
-                {
-                    if (expression.Task != null)
-                    {
-                        var type = expression.Task.GetExpressionType() as IDeclaredType;
-                        if (type != null && IsTaskType(type))
-                        {
-                            highlightings.Add(new HighlightingInfo(expression.GetDocumentRange(),
-                                                         new ConsiderUsingConfigureAwaitHighlighting(expression)));
-                        }
-                    }
-                });
+
+#if RS_V8
+            file.ProcessChildren<IAwaitExpression>(expression => ProcessAwait(expression, highlightings));
+#endif
+#if RS_V9
+            foreach (var expression in file.ThisAndDescendants<IAwaitExpression>())
+            {
+                ProcessAwait(expression, highlightings);
+            }
+#endif
 
             commiter(new DaemonStageResult(highlightings));
+        }
+
+        private static void ProcessAwait(IAwaitExpression expression, List<HighlightingInfo> highlightings)
+        {
+            if (expression.Task != null)
+            {
+                var type = expression.Task.GetExpressionType() as IDeclaredType;
+                if (type != null && IsTaskType(type))
+                {
+                    highlightings.Add(new HighlightingInfo(expression.GetDocumentRange(),
+                        new ConsiderUsingConfigureAwaitHighlighting(expression)));
+                }
+            }
         }
 
         private static bool IsTaskType(IDeclaredType type)

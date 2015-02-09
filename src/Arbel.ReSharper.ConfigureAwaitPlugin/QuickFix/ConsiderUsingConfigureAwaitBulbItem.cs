@@ -3,7 +3,10 @@ using JetBrains.Application.Progress;
 using JetBrains.DocumentManagers;
 using JetBrains.DocumentModel;
 using JetBrains.ProjectModel;
+using JetBrains.ReSharper.Feature.Services.Bulbs;
+#if RS_V8
 using JetBrains.ReSharper.Intentions.Extensibility;
+#endif
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.CodeStyle;
 using JetBrains.ReSharper.Psi.CSharp.ConstantValue;

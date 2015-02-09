@@ -2,12 +2,14 @@
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
+using JetBrains.ReSharper.Feature.Services.Daemon;
+using JetBrains.DocumentModel;
 
 [assembly: RegisterConfigurableSeverity(ConsiderUsingConfigureAwaitHighlighting.SeverityId,
   null,
   HighlightingGroupIds.BestPractice,
   "Consider adding ConfigureAwait",
-  "Library code should call ConfigureAwait ubiquitously. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
+  "Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
   Severity.SUGGESTION,
   false)]
 
@@ -24,6 +26,13 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
         {
             _expression = expression;
         }
+
+#if RS_V9
+        public DocumentRange CalculateRange()
+        {
+            return Expression.GetHighlightingRange();
+        }
+#endif
 
         public string ToolTip
         {

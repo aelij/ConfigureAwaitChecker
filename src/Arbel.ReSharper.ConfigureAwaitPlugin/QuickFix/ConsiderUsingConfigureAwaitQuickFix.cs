@@ -2,8 +2,14 @@ using System.Collections.Generic;
 using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
 using JetBrains.Annotations;
 using JetBrains.ReSharper.Feature.Services.Bulbs;
+#if RS_V9
+using JetBrains.ReSharper.Feature.Services.Intentions;
+using JetBrains.ReSharper.Feature.Services.QuickFixes;
+#endif
+#if RS_V8
 using JetBrains.ReSharper.Intentions.Extensibility;
 using JetBrains.ReSharper.Intentions.Extensibility.Menu;
+#endif
 using JetBrains.Util;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix

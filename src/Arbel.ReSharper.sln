@@ -7,6 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v8", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v8.csproj", "{F864E87E-E89E-4C4A-8680-C32AA4B9B70D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v8", "v8", "{D5D223C5-3111-498F-B217-518CA29BB82C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v9", "v9", "{D0AB6597-3151-4639-9153-5DA59F9228D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.v9", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.v9.csproj", "{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v9", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v9.csproj", "{D4073F03-F08B-466B-8667-2B2A55B2F30B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1ACD7AC4-65F3-4AD6-84A7-263014B69322}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +34,22 @@ Global
 		{F864E87E-E89E-4C4A-8680-C32AA4B9B70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F864E87E-E89E-4C4A-8680-C32AA4B9B70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F864E87E-E89E-4C4A-8680-C32AA4B9B70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4073F03-F08B-466B-8667-2B2A55B2F30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4073F03-F08B-466B-8667-2B2A55B2F30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4073F03-F08B-466B-8667-2B2A55B2F30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4073F03-F08B-466B-8667-2B2A55B2F30B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B2D4ADE-CE97-4B50-AD23-42336F3EAF79} = {D5D223C5-3111-498F-B217-518CA29BB82C}
+		{F864E87E-E89E-4C4A-8680-C32AA4B9B70D} = {D5D223C5-3111-498F-B217-518CA29BB82C}
+		{F3159B18-F527-42FE-AAE8-B60EEC81E0A3} = {D0AB6597-3151-4639-9153-5DA59F9228D3}
+		{D4073F03-F08B-466B-8667-2B2A55B2F30B} = {D0AB6597-3151-4639-9153-5DA59F9228D3}
 	EndGlobalSection
 EndGlobal
