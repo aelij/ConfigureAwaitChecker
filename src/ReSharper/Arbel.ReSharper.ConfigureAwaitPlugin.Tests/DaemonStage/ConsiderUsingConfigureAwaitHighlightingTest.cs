@@ -1,7 +1,9 @@
 ﻿using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
+#if RS_V8
 using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Daemon;
 using JetBrains.ReSharper.Daemon.CSharp;
+#endif
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Daemon;
 using JetBrains.ReSharper.Psi;

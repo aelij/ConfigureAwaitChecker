@@ -184,3 +184,5 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 .vs/
+
+*.[Gg]host[Dd]oc.xml

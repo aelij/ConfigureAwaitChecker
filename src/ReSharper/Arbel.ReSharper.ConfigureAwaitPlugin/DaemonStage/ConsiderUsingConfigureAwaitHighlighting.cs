@@ -2,8 +2,10 @@
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
+#if RS_V9
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.DocumentModel;
+#endif
 
 [assembly: RegisterConfigurableSeverity(ConsiderUsingConfigureAwaitHighlighting.SeverityId,
   null,
