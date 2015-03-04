@@ -4,10 +4,10 @@ using JetBrains.ReSharper.Daemon.CSharp.Stages;
 using JetBrains.ReSharper.Daemon.Stages;
 #endif
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
+using JetBrains.ReSharper.Psi;
 #if RS_V9
 using JetBrains.ReSharper.Feature.Services.Daemon;
 #endif
-using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
@@ -32,9 +32,9 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
 
         private static bool IsTaskType(IDeclaredType type)
         {
-            var clrName = type.GetClrName().FullName;
-            return string.Equals(clrName, TaskTypeName, StringComparison.Ordinal) ||
-                   string.Equals(clrName, TaskOfTTypeName, StringComparison.Ordinal);
+            string typeName = type.GetClrName().FullName;
+            return string.Equals(typeName, TaskTypeName, StringComparison.Ordinal) ||
+                   string.Equals(typeName, TaskOfTTypeName, StringComparison.Ordinal);
         }
     }
 }

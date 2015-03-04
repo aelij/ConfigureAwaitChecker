@@ -186,3 +186,4 @@ FakesAssemblies/
 .vs/
 
 *.[Gg]host[Dd]oc.xml
+/src/ReSharper/packages

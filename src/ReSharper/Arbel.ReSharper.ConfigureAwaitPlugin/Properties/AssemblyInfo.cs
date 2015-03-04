@@ -4,7 +4,7 @@ using JetBrains.Application.PluginSupport;
 #endif
 
 [assembly: AssemblyTitle("ReSharper ConfigureAwait Checker")]
-[assembly: AssemblyVersion("0.3.0.0")]
+[assembly: AssemblyVersion("0.3.1.0")]
 
 #if RS_V8
 [assembly: PluginTitle("ReSharper ConfigureAwait Checker")]

@@ -29,7 +29,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
             return new[]
             {
                 new ConsiderUsingConfigureAwaitBulbItem(_highlighting.Expression, false),
-                new ConsiderUsingConfigureAwaitBulbItem(_highlighting.Expression, true)
+                new ConsiderUsingConfigureAwaitBulbItem(_highlighting.Expression, true),
             }.ToQuickFixAction();
         }
 
