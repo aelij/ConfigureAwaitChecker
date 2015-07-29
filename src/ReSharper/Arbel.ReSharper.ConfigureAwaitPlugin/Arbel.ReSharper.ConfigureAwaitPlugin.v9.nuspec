@@ -2,12 +2,12 @@
 <package>
   <metadata>
     <id>ConfigureAwaitChecker.v9</id>
-    <version>0.4.0.0</version>
+    <version>0.4.0.1</version>
     <title>ConfigureAwait Checker for ReSharper 9</title>
     <authors>Eli Arbel</authors>
     <description>Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchronization bugs.</description>
     <copyright>Copyright &#x00A9; 2015 Eli Arbel</copyright>
-    <tags>await async configureawait</tags>
+    <tags>resharper await async configureawait</tags>
     <projectUrl>https://github.com/aelij/ConfigureAwaitChecker/</projectUrl>
     <licenseUrl>https://raw.githubusercontent.com/aelij/ConfigureAwaitChecker/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
