@@ -28,11 +28,8 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
             _value = value;
         }
 
-        public string Text
-        {
-            get { return string.Format("Add 'ConfigureAwait({0})'", GetValueText()); }
-        }
-        
+        public string Text => $"Add 'ConfigureAwait({GetValueText()})'";
+
         private string GetValueText()
         {
             return _value ? "true" : "false";
@@ -53,7 +50,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
                 using (solution.GetComponent<IShellLocks>().UsingWriteLock())
                     newExpression = ModificationUtil.ReplaceChild(
                       _literalExpression.Task, elementFactory.CreateExpression("$0.ConfigureAwait($1)", _literalExpression.Task, 
-                        elementFactory.CreateExpressionByConstantValue(CSharpConstantValueFactory.CreateBoolValue(_value, psiModule, null))));
+                        elementFactory.CreateExpressionByConstantValue(CSharpConstantValueFactory.CreateBoolValue(_value, psiModule))));
             });
 
             if (newExpression != null)

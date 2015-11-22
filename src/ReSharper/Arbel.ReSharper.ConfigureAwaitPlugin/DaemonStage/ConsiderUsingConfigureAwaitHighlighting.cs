@@ -31,11 +31,9 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
     {
         public const string SeverityId = "ConsiderUsingConfigureAwait";
 
-        private readonly IAwaitExpression _expression;
-
         public ConsiderUsingConfigureAwaitHighlighting(IAwaitExpression expression)
         {
-            _expression = expression;
+            Expression = expression;
         }
 
         public DocumentRange CalculateRange()
@@ -43,29 +41,17 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
             return Expression.GetHighlightingRange();
         }
 
-        public string ToolTip
-        {
-            get { return "Await used without ConfigureAwait"; }
-        }
+        public string ToolTip => "Await used without ConfigureAwait";
 
-        public string ErrorStripeToolTip
-        {
-            get { return ToolTip; }
-        }
+        public string ErrorStripeToolTip => ToolTip;
 
-        public int NavigationOffsetPatch
-        {
-            get { return 0; }
-        }
+        public int NavigationOffsetPatch => 0;
 
         public bool IsValid()
         {
-            return _expression == null || _expression.IsValid();
+            return Expression == null || Expression.IsValid();
         }
 
-        public IAwaitExpression Expression
-        {
-            get { return _expression; }
-        }
+        public IAwaitExpression Expression { get; }
     }
 }

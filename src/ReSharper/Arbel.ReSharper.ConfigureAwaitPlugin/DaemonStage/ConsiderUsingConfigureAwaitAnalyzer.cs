@@ -20,13 +20,10 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
 
         protected override void Run(IAwaitExpression element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
         {
-            if (element.Task != null)
+            var type = element.Task?.GetExpressionType() as IDeclaredType;
+            if (type != null && IsTaskType(type))
             {
-                var type = element.Task.GetExpressionType() as IDeclaredType;
-                if (type != null && IsTaskType(type))
-                {
-                    consumer.AddHighlighting(new ConsiderUsingConfigureAwaitHighlighting(element));
-                }
+                consumer.AddHighlighting(new ConsiderUsingConfigureAwaitHighlighting(element));
             }
         }
 

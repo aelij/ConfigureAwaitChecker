@@ -15,10 +15,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
     [TestFixture]
     public class ConsiderUsingConfigureAwaitQuickFixAvailabilityTest : QuickFixAvailabilityTestBase
     {
-        protected override string RelativeTestDataPath
-        {
-            get { return @"QuickFixes\ConsiderUsingConfigureAwait"; }
-        }
+        protected override string RelativeTestDataPath => @"QuickFixes\ConsiderUsingConfigureAwait";
 
         protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile psiSourceFile)
         {

@@ -24,10 +24,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.DaemonStage
             return highlighting is ConsiderUsingConfigureAwaitHighlighting;
         }
 
-        protected override string RelativeTestDataPath
-        {
-            get { return @"Daemon\ConsiderUsingConfigureAwait"; }
-        }
+        protected override string RelativeTestDataPath => @"Daemon\ConsiderUsingConfigureAwait";
 
         [Test]
         [TestCase("Case1.cs")]

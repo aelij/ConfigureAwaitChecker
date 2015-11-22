@@ -12,10 +12,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
     [TestFixture]
     public class ConsiderUsingConfigureAwaitQuickFixTest : QuickFixTestBase<ConsiderUsingConfigureAwaitQuickFix>
     {
-        protected override string RelativeTestDataPath
-        {
-            get { return @"QuickFixes\ConsiderUsingConfigureAwait"; }
-        }
+        protected override string RelativeTestDataPath => @"QuickFixes\ConsiderUsingConfigureAwait";
 
         [Test]
         public void Test01()
