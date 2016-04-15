@@ -1,13 +1,7 @@
 ﻿using System;
-using JetBrains.ReSharper.Daemon.CSharp.Stages;
-#if RS_V8
-using JetBrains.ReSharper.Daemon.Stages;
-#endif
 using JetBrains.ReSharper.Daemon.Stages.Dispatcher;
 using JetBrains.ReSharper.Psi;
-#if RS_V9
 using JetBrains.ReSharper.Feature.Services.Daemon;
-#endif
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage

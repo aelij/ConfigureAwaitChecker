@@ -2,14 +2,8 @@ using System.Collections.Generic;
 using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
 using JetBrains.Annotations;
 using JetBrains.ReSharper.Feature.Services.Bulbs;
-#if RS_V9
 using JetBrains.ReSharper.Feature.Services.Intentions;
 using JetBrains.ReSharper.Feature.Services.QuickFixes;
-#endif
-#if RS_V8
-using JetBrains.ReSharper.Intentions.Extensibility;
-using JetBrains.ReSharper.Intentions.Extensibility.Menu;
-#endif
 using JetBrains.Util;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
@@ -30,7 +24,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
             {
                 new ConsiderUsingConfigureAwaitBulbItem(_highlighting.Expression, false),
                 new ConsiderUsingConfigureAwaitBulbItem(_highlighting.Expression, true),
-            }.ToQuickFixAction();
+            }.ToQuickFixIntentions();
         }
 
         public bool IsAvailable(IUserDataHolder cache)

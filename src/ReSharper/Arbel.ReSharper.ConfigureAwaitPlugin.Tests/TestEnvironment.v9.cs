@@ -11,6 +11,7 @@ using JetBrains.Threading;
 using NUnit.Framework;
 
 [ZoneDefinition]
+// ReSharper disable once CheckNamespace
 public interface IConfigureAwaitPluginTestZone : ITestsZone, IRequire<PsiFeatureTestZone>
 {
 }
@@ -19,9 +20,7 @@ public interface IConfigureAwaitPluginTestZone : ITestsZone, IRequire<PsiFeature
 ///   Must be in the global namespace.
 /// </summary>
 [SetUpFixture]
-// ReSharper disable CheckNamespace
 public class ConfigureAwaitPluginTestEnvironmentAssembly : TestEnvironmentAssembly<IConfigureAwaitPluginTestZone>
-// ReSharper restore CheckNamespace
 {
     /// <summary>
     /// Gets the assemblies to load into test environment.
