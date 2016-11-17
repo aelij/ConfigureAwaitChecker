@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24627.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.v9", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.v9.csproj", "{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.csproj", "{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v9", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.v9.csproj", "{D4073F03-F08B-466B-8667-2B2A55B2F30B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.csproj", "{D4073F03-F08B-466B-8667-2B2A55B2F30B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

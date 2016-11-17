@@ -1,7 +1,7 @@
 ConfigureAwait Checker
 ======================
 
-ReSharper extension and Roslyn analyzer that check for tasks are not awaited using `ConfigureAwait`.
+ReSharper extension that check for tasks are not awaited using `ConfigureAwait`.
 
 ![](https://i.imgur.com/UbEjrNf.png)
 

@@ -55,9 +55,9 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.v9.csproj">
+    <ProjectReference Include="..\Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.csproj">
       <Project>{f3159b18-f527-42fe-aae8-b60eec81e0a3}</Project>
-      <Name>Arbel.ReSharper.ConfigureAwaitPlugin.v9</Name>
+      <Name>Arbel.ReSharper.ConfigureAwaitPlugin</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
