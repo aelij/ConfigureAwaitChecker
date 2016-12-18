@@ -1,11 +1,11 @@
 ﻿{
   "frameworks": {
-    "net40": {}
+    "net45": {}
   },
   "runtimes": {
     "win": {}
   },
   "dependencies": {
-    "JetBrains.ReSharper.SDK": "2016.2.20160818.171542"
+    "JetBrains.ReSharper.SDK": "2016.3.20161215.134837"
   }
 }

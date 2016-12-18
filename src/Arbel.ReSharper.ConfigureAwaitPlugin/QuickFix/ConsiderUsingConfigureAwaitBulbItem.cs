@@ -6,7 +6,7 @@ using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Feature.Services.Bulbs;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.CodeStyle;
-using JetBrains.ReSharper.Psi.CSharp.ConstantValue;
+using JetBrains.ReSharper.Psi.CSharp.ConstantValues;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.ExtensionsAPI.Tree;
 using JetBrains.ReSharper.Psi.Tree;
