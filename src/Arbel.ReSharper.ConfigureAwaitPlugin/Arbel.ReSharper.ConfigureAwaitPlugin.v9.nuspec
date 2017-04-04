@@ -2,8 +2,8 @@
 <package>
   <metadata>
     <id>ConfigureAwaitChecker.v9</id>
-    <version>0.9.0.0</version>
-    <title>ConfigureAwait Checker for ReSharper 2016.3</title>
+    <version>0.10.0.0</version>
+    <title>ConfigureAwait Checker for ReSharper 2017.1</title>
     <authors>Eli Arbel</authors>
     <description>Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchronization bugs.</description>
     <copyright>Copyright &#x00A9; 2016 Eli Arbel</copyright>
@@ -12,7 +12,7 @@
     <licenseUrl>https://raw.githubusercontent.com/aelij/ConfigureAwaitChecker/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="Wave" version="[7.0, 8.0)" />
+      <dependency id="Wave" version="[8.0, 9.0)" />
     </dependencies>
   </metadata>
   <files>

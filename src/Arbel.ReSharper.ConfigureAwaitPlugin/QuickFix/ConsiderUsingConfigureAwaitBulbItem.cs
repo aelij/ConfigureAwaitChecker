@@ -39,7 +39,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
 
             var containingFile = _literalExpression.GetContainingFile();
             var psiModule = _literalExpression.GetPsiModule();
-            var elementFactory = CSharpElementFactory.GetInstance(psiModule);
+            var elementFactory = CSharpElementFactory.GetInstance(_literalExpression);
             
             IExpression newExpression = null;
             _literalExpression.GetPsiServices().Transactions.Execute(GetType().Name, () =>
@@ -53,7 +53,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
             if (newExpression != null)
             {
                 IRangeMarker marker = newExpression.GetDocumentRange().CreateRangeMarker(solution.GetComponent<DocumentManager>());
-                containingFile.OptimizeImportsAndRefs(marker, false, true, NullProgressIndicator.Instance);
+                containingFile.OptimizeImportsAndRefs(marker, false, true, NullProgressIndicator.Create());
             }
         }
     }
