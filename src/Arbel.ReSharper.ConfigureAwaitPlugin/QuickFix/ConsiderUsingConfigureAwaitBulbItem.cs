@@ -1,5 +1,5 @@
-﻿using JetBrains.Application;
-using JetBrains.Application.Progress;
+﻿using JetBrains.Application.Progress;
+using JetBrains.Application.Threading;
 using JetBrains.DocumentManagers;
 using JetBrains.DocumentModel;
 using JetBrains.ProjectModel;

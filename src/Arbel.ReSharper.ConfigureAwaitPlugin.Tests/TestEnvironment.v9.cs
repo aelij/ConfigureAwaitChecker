@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
-using JetBrains.Application;
 using JetBrains.Application.BuildScript.Application.Zones;
+using JetBrains.Application.Infra;
 using JetBrains.ReSharper.Resources.Shell;
 using JetBrains.ReSharper.TestFramework;
 using JetBrains.TestFramework;
