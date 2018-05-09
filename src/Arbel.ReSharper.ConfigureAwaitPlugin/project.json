@@ -6,6 +6,6 @@
     "win": {}
   },
   "dependencies": {
-    "JetBrains.ReSharper.SDK": "2017.3.0"
+    "JetBrains.ReSharper.SDK": "2018.1.0"
   }
 }
