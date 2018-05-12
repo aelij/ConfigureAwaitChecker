@@ -16,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\bin\v9\Arbel.ReSharper.ConfigureAwaitPlugin.v9.dll" target="DotFiles" />
+    <file src="bin\Release\net45\Arbel.ReSharper.ConfigureAwaitPlugin.dll" target="DotFiles" />
   </files>
 </package>
