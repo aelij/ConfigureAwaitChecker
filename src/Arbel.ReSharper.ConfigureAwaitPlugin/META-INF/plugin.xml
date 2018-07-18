@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<idea-plugin>
+    <depends>com.intellij.modules.rider</depends>
+    <idea-version since-build="181.4952.311" until-build="183.*"/>
+    <extensions defaultExtensionNs="ConfigureAwaitChecker.v9"/>
+    <id>ConfigureAwaitChecker.v9</id>
+    <version>0.14.0</version>
+    <name>ConfigureAwait Checker</name>
+    <vendor url="https://github.com/aelij/ConfigureAwaitChecker">ConfigureAwaitChecker</vendor>
+    <description>
+        Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it
+        clearer how the continuation is invoked and avoids synchronization bugs.
+    </description>
+</idea-plugin>
