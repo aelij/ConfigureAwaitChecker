@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj\**</DefaultItemExcludes>
+    <RootNamespace>Arbel.ReSharper.ConfigureAwaitPlugin</RootNamespace>
+    <OutputPath>bin\$(MSBuildProjectName)\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+</Project>

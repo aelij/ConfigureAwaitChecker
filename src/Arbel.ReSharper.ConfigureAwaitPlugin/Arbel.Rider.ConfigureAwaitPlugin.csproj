@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net45</TargetFramework>
+        <Title>ReSharper ConfigureAwait Checker</Title>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Rider.SDK" Version="2018.1.3" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Remove="META-INF\plugin.xml" />
+        <Content Include="META-INF\plugin.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <Target Name="PackagePlugin" AfterTargets="Build">
+        <MakeDir Directories="$(OutputPath)\plugin" />
+        <MakeDir Directories="$(OutputPath)\plugin\dotnet" />
+        <MakeDir Directories="$(OutputPath)\plugin\META-INF" />
+        <Copy SourceFiles="$(OutputPath)\META-INF\plugin.xml" DestinationFolder="$(OutputPath)\plugin\META-INF" />
+        <Copy SourceFiles="$(OutputPath)\$(AssemblyName).dll" DestinationFolder="$(OutputPath)\plugin\dotnet" />
+    </Target>
+    <Target Name="DeletePackage" AfterTargets="Clean">
+        <RemoveDir Directories="$(OutputPath)\plugin" />
+        <RemoveDir Directories="$(OutputPath)\META-INF" />
+    </Target>
+</Project>
