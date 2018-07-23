@@ -1,7 +1,7 @@
 ConfigureAwait Checker
 ======================
 
-ReSharper extension that check for tasks are not awaited using `ConfigureAwait`.
+[ReSharper extension](https://resharper-plugins.jetbrains.com/packages/ConfigureAwaitChecker.v9/) and [Rider plugin](https://plugins.jetbrains.com/plugin/10948-configureawait-checker) that check for tasks are not awaited using `ConfigureAwait`.
 
 ![](https://i.imgur.com/UbEjrNf.png)
 
