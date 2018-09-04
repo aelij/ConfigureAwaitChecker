@@ -1,4 +1,5 @@
 ﻿using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
+using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Intentions;
 using JetBrains.ReSharper.Psi;
@@ -11,7 +12,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
     {
         protected override string RelativeTestDataPath => @"QuickFixes\ConsiderUsingConfigureAwait";
 
-        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile psiSourceFile)
+        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile psiSourceFile, IContextBoundSettingsStore boundSettingsStore)
         {
             return highlighting is ConsiderUsingConfigureAwaitHighlighting;
         }

@@ -12,7 +12,7 @@ using NUnit.Framework;
 
 [ZoneDefinition]
 // ReSharper disable once CheckNamespace
-public interface IConfigureAwaitPluginTestZone : ITestsZone, IRequire<PsiFeatureTestZone>
+public interface IConfigureAwaitPluginTestZone : ITestsEnvZone, IRequire<PsiFeatureTestZone>
 {
 }
 
