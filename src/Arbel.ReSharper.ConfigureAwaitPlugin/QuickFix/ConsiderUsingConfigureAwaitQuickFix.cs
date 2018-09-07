@@ -81,6 +81,11 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
 
             return null;
         }
+
+        protected override ITreeNode TryGetContextTreeNode()
+        {
+            return null;
+        }
     }
 
     [QuickFix]
