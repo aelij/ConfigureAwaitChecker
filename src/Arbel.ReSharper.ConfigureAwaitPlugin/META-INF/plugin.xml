@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <idea-plugin>
     <depends>com.intellij.modules.rider</depends>
-    <idea-version since-build="181.4952.311" until-build="183.*"/>
+    <idea-version since-build="183.5047.83" until-build="183.*"/>
     <id>ConfigureAwaitChecker</id>
-    <version>0.14.0</version>
+    <version>0.16.0</version>
     <name>ConfigureAwait Checker</name>
     <vendor url="https://github.com/aelij/ConfigureAwaitChecker">Eli Arbel</vendor>
     <description>
