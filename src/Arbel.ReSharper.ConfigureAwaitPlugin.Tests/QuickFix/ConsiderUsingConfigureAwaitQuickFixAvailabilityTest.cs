@@ -3,24 +3,20 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Intentions;
 using JetBrains.ReSharper.Psi;
+using JetBrains.ReSharper.TestFramework;
 using NUnit.Framework;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
 {
-    [TestFixture]
+    [TestNetFramework45]
     public class ConsiderUsingConfigureAwaitQuickFixAvailabilityTest : QuickFixAvailabilityTestBase
     {
         protected override string RelativeTestDataPath => @"QuickFixes\ConsiderUsingConfigureAwait";
 
-        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile psiSourceFile, IContextBoundSettingsStore boundSettingsStore)
-        {
-            return highlighting is ConsiderUsingConfigureAwaitHighlighting;
-        }
+        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile psiSourceFile, IContextBoundSettingsStore boundSettingsStore) =>
+            highlighting is ConsiderUsingConfigureAwaitHighlighting;
 
         [Test]
-        public void Availability01()
-        {
-            DoTestFiles("Availability01.cs");
-        }
+        public void TestAvailabilityForTask() => DoNamedTest2();
     }
 }

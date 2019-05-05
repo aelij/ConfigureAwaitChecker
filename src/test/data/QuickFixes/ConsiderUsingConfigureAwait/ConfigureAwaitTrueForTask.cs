@@ -4,6 +4,6 @@ class C
 {
   public async void Main()
   {
-    await{caret} Task.Delay(1);
+    await Task.Delay(1){caret};
   }
 }
