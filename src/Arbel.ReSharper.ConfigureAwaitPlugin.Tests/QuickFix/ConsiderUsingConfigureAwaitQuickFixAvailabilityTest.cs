@@ -3,12 +3,11 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Intentions;
 using JetBrains.ReSharper.Psi;
-using JetBrains.ReSharper.TestFramework;
 using NUnit.Framework;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
 {
-    [TestNetFramework45]
+    [PluginTest]
     public class ConsiderUsingConfigureAwaitQuickFixAvailabilityTest : QuickFixAvailabilityTestBase
     {
         protected override string RelativeTestDataPath => @"QuickFixes\ConsiderUsingConfigureAwait";
@@ -18,5 +17,8 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.QuickFix
 
         [Test]
         public void TestAvailabilityForTask() => DoNamedTest2();
+        
+        [Test]
+        public void TestAvailabilityForValueTask() => DoNamedTest2();
     }
 }
