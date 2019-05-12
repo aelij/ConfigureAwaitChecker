@@ -3,26 +3,20 @@ using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 using JetBrains.ReSharper.FeaturesTestFramework.Daemon;
 using JetBrains.ReSharper.Psi;
+using JetBrains.ReSharper.TestFramework;
 using NUnit.Framework;
 
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.Tests.DaemonStage
 {
-    [TestFixture]
+    [TestNetFramework45]
     public class ConsiderUsingConfigureAwaitHighlightingTest : CSharpHighlightingTestBase
     {
-
-        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile sourceFile, IContextBoundSettingsStore settingsStore)
-        {
-            return highlighting is ConsiderUsingConfigureAwaitHighlighting;
-        }
+        protected override bool HighlightingPredicate(IHighlighting highlighting, IPsiSourceFile sourceFile, IContextBoundSettingsStore settingsStore) =>
+            highlighting is ConsiderUsingConfigureAwaitHighlighting;
 
         protected override string RelativeTestDataPath => @"Daemon\ConsiderUsingConfigureAwait";
 
         [Test]
-        [TestCase("Case1.cs")]
-        public void Test(string testName)
-        {
-            DoTestSolution(testName);
-        }
+        public void TestHighlightingForTask() => DoNamedTest2();
     }
 }

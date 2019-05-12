@@ -1,0 +1,20 @@
+﻿using System.Threading.Tasks;
+
+class C
+{
+  public async void Main()
+  {
+    |await Task.Delay(1)|(0);
+  }
+}
+------------------------------------------------
+0: Await used without ConfigureAwait
+QUICKFIXES:
+Add 'ConfigureAwait(false)'
+--Add 'ConfigureAwait(false)' in file
+--Add 'ConfigureAwait(false)' in project
+--Add 'ConfigureAwait(false)' in solution
+Add 'ConfigureAwait(true)'
+--Add 'ConfigureAwait(true)' in file
+--Add 'ConfigureAwait(true)' in project
+--Add 'ConfigureAwait(true)' in solution
