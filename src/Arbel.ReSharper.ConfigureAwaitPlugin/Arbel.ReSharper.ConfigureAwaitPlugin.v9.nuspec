@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ConfigureAwaitChecker.v9</id>
-    <version>0.17.0</version>
+    <version>0.18.0</version>
     <title>ConfigureAwait Checker for ReSharper 2019.1</title>
     <authors>Eli Arbel</authors>
     <description>Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchronization bugs.</description>

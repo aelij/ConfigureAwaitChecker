@@ -10,6 +10,8 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
     {
         private const string TaskTypeName = "System.Threading.Tasks.Task";
         private const string TaskOfTTypeName = "System.Threading.Tasks.Task`1";
+        private const string ValueTaskTypeName = "System.Threading.Tasks.ValueTask";
+        private const string ValueTaskOfTTypeName = "System.Threading.Tasks.ValueTask`1";
 
         protected override void Run(IAwaitExpression element, ElementProblemAnalyzerData data, IHighlightingConsumer consumer)
         {
@@ -24,7 +26,9 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
         {
             string typeName = type.GetClrName().FullName;
             return string.Equals(typeName, TaskTypeName, StringComparison.Ordinal) ||
-                   string.Equals(typeName, TaskOfTTypeName, StringComparison.Ordinal);
+                   string.Equals(typeName, TaskOfTTypeName, StringComparison.Ordinal) ||
+                   string.Equals(typeName, ValueTaskTypeName, StringComparison.Ordinal) ||
+                   string.Equals(typeName, ValueTaskOfTTypeName, StringComparison.Ordinal);
         }
     }
 }
