@@ -4,7 +4,7 @@
     <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2019.1.1" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="2019.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.csproj" />
