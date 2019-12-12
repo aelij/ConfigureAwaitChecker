@@ -5,6 +5,6 @@
     <Title>ReSharper ConfigureAwait Checker</Title>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.2.0" />
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.3.0" />
   </ItemGroup>
 </Project>
