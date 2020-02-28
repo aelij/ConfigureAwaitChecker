@@ -5,10 +5,9 @@
           Condition=" Exists('$([MSBuild]::GetPathOfFileAbove(`Directory.Build.props`, `$(MSBuildThisFileDirectory)../`))') " />
 
   <PropertyGroup>
-    <BaseIntermediateOutputPath>obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <DefaultItemExcludes>$(DefaultItemExcludes);obj\**</DefaultItemExcludes>
-    <RootNamespace>Arbel.ReSharper.ConfigureAwaitPlugin</RootNamespace>
-    <OutputPath>bin\$(MSBuildProjectName)\$(Configuration)\</OutputPath>
+    <SdkVersion>2019.3.4</SdkVersion>
+    <WaveVersionBase>$(SdkVersion.Substring(2,2))$(SdkVersion.Substring(5,1))</WaveVersionBase>
+    <WaveVersion>$(WaveVersionBase).0.0$(SdkVersion.Substring(8))</WaveVersion>
   </PropertyGroup>
 
 </Project>

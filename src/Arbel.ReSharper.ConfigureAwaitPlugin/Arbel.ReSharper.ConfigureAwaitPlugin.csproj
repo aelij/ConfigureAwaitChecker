@@ -1,10 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <Title>ReSharper ConfigureAwait Checker</Title>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>True</IsPackable>
+
+    <Title>ReSharper ConfigureAwait Checker</Title>
+    <Authors>Eli Arbel</Authors>
+    <Description>Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchronization bugs.</Description>
+    <Copyright>Copyright &#x00A9; Eli Arbel</Copyright>
+    <PackageTags>resharper await async configureawait</PackageTags>
+    <PackageProjectUrl>https://github.com/aelij/ConfigureAwaitChecker/</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2019.3.0" />
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
+    <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
+    <PackageReference Include="Wave" Version="$(WaveVersion)" />
   </ItemGroup>
+
 </Project>

@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.csproj", "{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbel.ReSharper.ConfigureAwaitPlugin", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.ReSharper.ConfigureAwaitPlugin.csproj", "{F3159B18-F527-42FE-AAE8-B60EEC81E0A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.csproj", "{D4073F03-F08B-466B-8667-2B2A55B2F30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbel.ReSharper.ConfigureAwaitPlugin.Tests", "Arbel.ReSharper.ConfigureAwaitPlugin.Tests\Arbel.ReSharper.ConfigureAwaitPlugin.Tests.csproj", "{D4073F03-F08B-466B-8667-2B2A55B2F30B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arbel.Rider.ConfigureAwaitPlugin", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.Rider.ConfigureAwaitPlugin.csproj", "{E8F9F4E2-6506-4CAB-9B9A-475E3BE2B88F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arbel.Rider.ConfigureAwaitPlugin", "Arbel.ReSharper.ConfigureAwaitPlugin\Arbel.Rider.ConfigureAwaitPlugin.csproj", "{E8F9F4E2-6506-4CAB-9B9A-475E3BE2B88F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5172C33-216C-4111-894B-C058E90FEFA1}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABB293F2-DB56-4F19-8DD6-273C8DFBF959}
 	EndGlobalSection
 EndGlobal
