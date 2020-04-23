@@ -33,7 +33,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
 
         protected override IScopedFixingStrategy GetScopedFixingStrategy(ISolution solution)
         {
-            return new SameTypeQuickFixingStrategy(this, solution);
+            return new SameQuickFixTypeStrategy(this, solution);
         }
 
         protected override ScopedQuickFixExecutor GetScopedQuickFixExecutor(ISolution solution, IScopedFixingStrategy fixingStrategy,
