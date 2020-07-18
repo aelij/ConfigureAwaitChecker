@@ -7,6 +7,7 @@
   <PropertyGroup>
     <IsPackable>True</IsPackable>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <PackageId>ConfigureAwaitChecker.v9</PackageId>
 
     <Version>0.21.0</Version>
     <Title>ReSharper ConfigureAwait Checker</Title>
@@ -19,8 +20,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="bin\$(AssemblyName)\$(TargetFramework)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" />
-    <Content Include="bin\$(AssemblyName)\$(TargetFramework)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" />
+    <Content Include="bin\$(MSBuildProjectName)\$(Configuration)\$(TargetFramework)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" />
+    <Content Include="bin\$(MSBuildProjectName)\$(Configuration)\$(TargetFramework)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" />
   </ItemGroup>
   
   <ItemGroup>
