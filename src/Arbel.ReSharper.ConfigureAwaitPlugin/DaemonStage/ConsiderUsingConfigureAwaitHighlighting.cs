@@ -4,16 +4,16 @@ using Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage;
 using JetBrains.DocumentModel;
 using JetBrains.ReSharper.Feature.Services.Daemon;
 
-[assembly: RegisterConfigurableSeverity(
-    ConsiderUsingConfigureAwaitHighlighting.SeverityId,
-    null,
-    HighlightingGroupIds.BestPractice,
-    "Consider adding ConfigureAwait",
-    "Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
-    Severity.SUGGESTION)]
-
 namespace Arbel.ReSharper.ConfigureAwaitPlugin.DaemonStage
 {
+    [RegisterConfigurableSeverity(
+        ConsiderUsingConfigureAwaitHighlighting.SeverityId,
+        null,
+        HighlightingGroupIds.BestPractice,
+        "Consider adding ConfigureAwait",
+        "Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchonization bugs.",
+        Severity.SUGGESTION)]
+
     [ConfigurableSeverityHighlighting(SeverityId, CSharpLanguage.Name, OverlapResolve = OverlapResolveKind.WARNING)]
     public sealed class ConsiderUsingConfigureAwaitHighlighting : IHighlighting
     {
