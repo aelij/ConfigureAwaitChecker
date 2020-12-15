@@ -5,7 +5,7 @@
           Condition=" Exists('$([MSBuild]::GetPathOfFileAbove(`Directory.Build.props`, `$(MSBuildThisFileDirectory)../`))') " />
 
   <PropertyGroup>
-    <SdkVersion>2020.2.0</SdkVersion>
+    <SdkVersion>2020.3.0</SdkVersion>
     <WaveVersionBase>$(SdkVersion.Substring(2,2))$(SdkVersion.Substring(5,1))</WaveVersionBase>
     <WaveVersion>$(WaveVersionBase).0.0$(SdkVersion.Substring(8))</WaveVersion>
   </PropertyGroup>
