@@ -1,0 +1,26 @@
+name: publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Publish
+      shell: pwsh
+      env:
+        JB_TOKEN: ${{ secrets.JB }}
+      run: |
+        ./src/Arbel.ReSharper.ConfigureAwaitPlugin/package.ps1 -Publish
