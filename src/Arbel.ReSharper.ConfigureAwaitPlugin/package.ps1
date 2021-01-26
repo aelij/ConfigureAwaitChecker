@@ -21,6 +21,9 @@ Copy-Item $PSScriptRoot/bin/Arbel.ReSharper.ConfigureAwaitPlugin/Release/*.nupkg
 
 if ($Publish) {
   $token = $env:JB_TOKEN
+  Write-Host "Pushing Rider plugin"
   native { curl -i --header "Authorization: Bearer $token" -F pluginId=10948 -F file=@$PSScriptRoot/plugin.zip -F channel=Stable 'https://plugins.jetbrains.com/plugin/uploadPlugin' }
-  Get-ChildItem $PSScriptRoot/*.nupkg | ForEach-Object { native { dotnet nuget push $_.FullName $token --source 'https://plugins.jetbrains.com/' } }
+  Write-Host
+  Write-Host "Pushing ReSharper plugin"
+  Get-ChildItem $PSScriptRoot/*.nupkg | ForEach-Object { native { dotnet nuget push $_.FullName --api-key $token --source 'https://plugins.jetbrains.com/' } }
 }
