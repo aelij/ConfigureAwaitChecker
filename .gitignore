@@ -188,3 +188,5 @@ FakesAssemblies/
 *.[Gg]host[Dd]oc.xml
 /src/ReSharper/packages
 *.lock.json
+
+*.zip
