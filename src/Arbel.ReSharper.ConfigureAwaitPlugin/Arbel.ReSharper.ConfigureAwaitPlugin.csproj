@@ -9,7 +9,7 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <PackageId>ConfigureAwaitChecker.v9</PackageId>
 
-    <Version>0.23.0</Version>
+    <Version>0.24.0</Version>
     <Title>ReSharper ConfigureAwait Checker</Title>
     <Authors>Eli Arbel</Authors>
     <Description>Library code should use ConfigureAwait with every await. Always specifying ConfigureAwait makes it clearer how the continuation is invoked and avoids synchronization bugs.</Description>
@@ -27,7 +27,7 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
     <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
-    <PackageReference Include="Wave" Version="$(WaveVersion)" />
+    <PackageReference Include="Wave" Version="[$(WaveVersion)]" />
   </ItemGroup>
 
 </Project>
