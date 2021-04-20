@@ -5,8 +5,9 @@ using JetBrains.Application.Progress;
 using JetBrains.Application.Threading;
 using JetBrains.DocumentManagers;
 using JetBrains.ProjectModel;
-using JetBrains.ReSharper.Feature.Services.Intentions.Scoped.QuickFixes;
+using JetBrains.ReSharper.Feature.Services.Intentions.Scoped.Executors;
 using JetBrains.ReSharper.Feature.Services.QuickFixes;
+using JetBrains.ReSharper.Feature.Services.QuickFixes.Scoped;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.CodeStyle;
@@ -36,7 +37,7 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
             return new SameQuickFixTypeStrategy(this, solution);
         }
 
-        protected override ScopedQuickFixExecutor GetScopedQuickFixExecutor(ISolution solution, IScopedFixingStrategy fixingStrategy,
+        protected override ScopedActionExecutor GetScopedQuickFixExecutor(ISolution solution, IScopedFixingStrategy fixingStrategy,
             PsiLanguageType languageType)
         {
             return new ScopedQuickFixExecutor(solution, fixingStrategy, null, languageType);
