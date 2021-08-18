@@ -6,6 +6,7 @@ using JetBrains.Application.Threading;
 using JetBrains.DocumentManagers;
 using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Feature.Services.Intentions.Scoped.Executors;
+using JetBrains.ReSharper.Feature.Services.Intentions.Scoped.Scopes;
 using JetBrains.ReSharper.Feature.Services.QuickFixes;
 using JetBrains.ReSharper.Feature.Services.QuickFixes.Scoped;
 using JetBrains.ReSharper.Psi;
@@ -38,9 +39,9 @@ namespace Arbel.ReSharper.ConfigureAwaitPlugin.QuickFix
         }
 
         protected override ScopedActionExecutor GetScopedQuickFixExecutor(ISolution solution, IScopedFixingStrategy fixingStrategy,
-            PsiLanguageType languageType)
+            Scope scope, PsiLanguageType languageType)
         {
-            return new ScopedQuickFixExecutor(solution, fixingStrategy, null, languageType);
+            return new ScopedQuickFixExecutor(solution, fixingStrategy, scope, null, languageType);
         }
         
         public override bool IsAvailable(IUserDataHolder cache)
